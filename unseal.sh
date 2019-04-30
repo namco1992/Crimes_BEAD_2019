@@ -14,9 +14,6 @@ COUNT=1
 LIMIT=30
 export VAULT_ADDR=http://127.0.0.1:8200
 
-# sleep for 5 seconds, waiting for the vault starts
-sleep 5
-
 while [ 1 ]
 do
   echo "Checking if Vault is up and running (try $COUNT)..." &> /proc/1/fd/1
@@ -42,5 +39,5 @@ do
     ps aux &> /proc/1/fd/1
   fi
   COUNT=$((COUNT+1))
-  sleep 5
+  sleep 3
 done
