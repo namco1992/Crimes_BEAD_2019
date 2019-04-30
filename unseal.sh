@@ -36,7 +36,6 @@ do
   else
     # For debugging
     echo "$VAULT_STATUS" &> /proc/1/fd/1
-    ps aux &> /proc/1/fd/1
   fi
   COUNT=$((COUNT+1))
   sleep 3
